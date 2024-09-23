@@ -1,0 +1,27 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: web-site
+  labels:
+    app: web-site
+    tier: frontend
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: web-site
+      tier: frontend
+  template:
+    metadata:
+      labels:
+        app: web-site
+        tier: frontend
+    spec:
+      containers:
+      - name: web-site
+        image: anjanar17/my-hugo-website:latest
+        securityContext:
+          runAsNonRoot: true
+        ports:
+        - containerPort: 8080

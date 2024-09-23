@@ -1,0 +1,31 @@
+baseURL = "/"
+languageCode = "en-us"
+title = "You Built A Container!"
+theme = "minimal"
+
+[params]
+    author = "test"
+    description = "test"
+    githubUsername = "test"
+    accent = "blue"
+    showBorder = true
+    backgroundColor = "white"
+    font = "Raleway"
+    highlight = true
+    highlightStyle = "default"
+    highlightLanguages = ["go", "haskell", "kotlin", "scala", "swift"]
+
+[[menu.main]]
+    url = "/"
+    name = "Home"
+    weight = 1
+
+[[menu.icon]]
+    url = "https://github.com/"
+    name = "github"
+    weight = 2
+
+[[menu.icon]]
+    url = "https://twitter.com/vmware/"
+    name = "twitter"
+    weight = 3
